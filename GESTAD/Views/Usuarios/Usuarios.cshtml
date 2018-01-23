@@ -1,0 +1,15 @@
+﻿@model GESTAD.Models.Usuario
+@{
+    ViewBag.Title = "Usuarios";
+}
+
+<h2>Usuarios</h2>
+
+@using (Html.BeginForm("Usuarios","Usuarios",FormMethod.Post))
+{
+    @Html.LabelFor(modelo => modelo.nombreUsuario)
+    @Html.EditorFor(modelo => modelo.nombreUsuario)
+    @Html.ValidationMessageFor(modelo => modelo.nombreUsuario)
+
+    <input type="submit" value="Enviar" />
+}
