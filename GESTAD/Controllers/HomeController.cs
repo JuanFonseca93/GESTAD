@@ -6,8 +6,6 @@ using System.Web.Mvc;
 
 namespace GESTAD.Controllers
 {
-    [Authorize]
-    [ValidateAntiForgeryToken]
     public class HomeController : Controller
     {
         public ActionResult Index()

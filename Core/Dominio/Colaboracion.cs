@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace GESTAD.Models
+namespace Core.Dominio
 {
     public class Colaboracion
     {
@@ -12,11 +12,17 @@ namespace GESTAD.Models
         public bool propietarioColaboracion { get; set; }
 
 
-        public bool tipoColaboracion  { get; set; }
+        public bool tipoColaboracionInterno  { get; set; }
+
+        public int idTipoColaboracion { get; set; }
 
         public TipoColaboracion TipoColaboracion { get; set; }
 
-        public Documento documento { get; set; }
+        //public int idDocumento { get; set; }
+
+        //public Documento documento { get; set; }
+
+        public int idUsuario { get; set; }
 
         public Usuario usuario { get; set; }
 

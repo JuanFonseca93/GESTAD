@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace GESTAD.Models
+namespace Core.Dominio
 {
     public class Documento
     {
@@ -25,5 +24,11 @@ namespace GESTAD.Models
         public string categoriaDocumento { get; set; }
 
         public bool estadoDocumento { get; set; }
+
+        public int idUsuario { get; set; }
+
+        public virtual Usuario usuario { get; set; }
+
+        public virtual ICollection<Colaboracion> colaboraciones { get; set; }
     }
 }
